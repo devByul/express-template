@@ -25,6 +25,8 @@
     "space-before-function-paren": "off",
     "array-callback-return": "off",
     "prefer-regex-literals": 0,
-    "@typescript-eslint/no-explicit-any": 0
+    "@typescript-eslint/no-explicit-any": 0,
+    "no-throw-literal": "off",
+    "@typescript-eslint/no-throw-literal": "off"
   }
 }

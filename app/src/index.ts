@@ -1,12 +1,12 @@
-import express, { Express, Request, Response } from "express";
+import app from "./core/config/express";
+import dotenv from "./core/config/dotenv";
 
-const app: Express = express();
-const port = 7070;
+const PORT = dotenv.server.port;
+const MODE = dotenv.node.mode;
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("hi?");
-});
+const initLogger = () => {
+  console.log(`Server listening on port : ${PORT}`);
+  console.log(`Server mode : ${MODE}`);
+};
 
-app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
-});
+app.listen(PORT, initLogger);

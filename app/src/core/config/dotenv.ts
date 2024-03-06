@@ -11,6 +11,8 @@ switch (process.env.NODE_MODE) {
   case "prod":
     path = `${process.cwd()}/env/.env.prod`;
     break;
+  default:
+    throw new Error("The NODE_MODE value is not valid.");
 }
 
 config({ path });

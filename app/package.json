@@ -10,7 +10,9 @@
     "win:start": "cross-env NODE_MODE=prod ts-node src/index.ts",
     "win:dev": "cross-env NODE_MODE=dev nodemon src/index.ts",
     "win:local": "cross-env NODE_MODE=local nodemon src/index.ts",
-    "build": "rm -rf ./dist & tsc -p tsconfig.json"
+    "build": "rm -rf ./dist & tsc -p tsconfig.json",
+    "lint": "eslint ./src",
+    "prettier": "prettier --write ./src"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",

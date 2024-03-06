@@ -14,7 +14,8 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./app"
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
@@ -23,6 +24,6 @@
     "quotes": [2, "double", { "avoidEscape": false }],
     "space-before-function-paren": "off",
     "array-callback-return": "off",
-    "prefer-regex-literals": false
+    "prefer-regex-literals": 0
   }
 }

@@ -2,11 +2,10 @@
   "name": "express",
   "version": "1.0.0",
   "description": "",
-  "main": "app/src/index.js",
-  "type": "module",
+  "main": "app/src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app/src/index.js"
+    "start": "ts-node app/src/index.ts"
   },
   "author": "",
   "license": "ISC",

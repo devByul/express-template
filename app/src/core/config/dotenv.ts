@@ -3,13 +3,13 @@ import { config } from "dotenv";
 let path;
 switch (process.env.NODE_MODE) {
   case "local":
-    path = `${process.cwd()}/app/env/.env.local`;
+    path = `${process.cwd()}/env/.env.local`;
     break;
   case "dev":
-    path = `${process.cwd()}/app/env/.env.dev`;
+    path = `${process.cwd()}/env/.env.dev`;
     break;
   case "prod":
-    path = `${process.cwd()}/app/env/.env.prod`;
+    path = `${process.cwd()}/env/.env.prod`;
     break;
 }
 

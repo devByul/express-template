@@ -20,6 +20,9 @@ config({ path });
 const dotenv = {
   node: {
     mode: process.env.NODE_MODE,
+    local: process.env.LOCAL,
+    dev: process.env.DEVELOPMENT,
+    prod: process.env.PRODUCTION,
   },
   server: {
     port: process.env.PORT,

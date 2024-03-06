@@ -1,13 +1,13 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 import morgan from "morgan";
 import { stream } from "./logger";
+
+import WorldRouter from "../../domain/route/world/index";
 
 const app: Express = express();
 
 app.use(morgan("combined", { stream }));
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("hi?");
-});
+app.use("/world", WorldRouter);
 
 export default app;

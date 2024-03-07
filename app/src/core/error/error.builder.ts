@@ -1,5 +1,6 @@
 import { StatusCodes } from "http-status-codes";
-import { IError } from "../../interface/IError";
+import { Result } from "express-validator";
+import { IError } from "../interface/IError";
 
 class ErrorBuilder {
   private error: IError;
@@ -20,6 +21,11 @@ class ErrorBuilder {
 
   setMessage = (message: string) => {
     this.error.message = message;
+    return this;
+  };
+
+  setValidation = (result: Result) => {
+    this.error.validation = result;
     return this;
   };
 

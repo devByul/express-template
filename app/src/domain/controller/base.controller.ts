@@ -55,7 +55,7 @@ export default class BaseController {
   };
 
   protected static error = (res: Response, status: number, error: any) => {
-    res.status(status).json({
+    res.status(status ?? 500).json({
       success: false,
       error,
       response: new Date(),

@@ -9,6 +9,15 @@ declare global {
 
       // Server
       PORT: number;
+
+      // Database
+      MYSQL_NAME: string;
+      MYSQL_HOST: string;
+      MYSQL_PORT: number;
+      MYSQL_USER: string;
+      MYSQL_PASSWORD: string;
+      MYSQL_DATABASE: string;
+      MYSQL_CONLIMIT: number;
     }
   }
 }

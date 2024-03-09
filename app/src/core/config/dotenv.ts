@@ -27,6 +27,17 @@ const dotenv = {
   server: {
     port: process.env.PORT,
   },
+  database: {
+    thingsflow: {
+      name: process.env.MYSQL_NAME as string,
+      host: process.env.MYSQL_HOST as string,
+      port: Number(process.env.MYSQL_PORT),
+      user: process.env.MYSQL_USER as string,
+      password: process.env.MYSQL_PASSWORD as string,
+      database: process.env.MYSQL_DATABASE as string,
+      connectionLimit: Number(process.env.MYSQL_CONLIMIT),
+    },
+  },
 };
 
 export default dotenv;
